@@ -1,12 +1,13 @@
 <nav class="navbar navbar-light">
     <div class="container">
         <a class="navbar-brand" href="index.html">conduit</a>
-        <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword">
-        <button class="btn btn-sm btn-primary" (click)="resetStatus()">
-          Start
-        </button>
+        <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword" [(ngModel)]="keyword">
         <button class="btn btn-sm btn-primary" (click)="search($event)">
           <i class="ion-search"></i>
-        </button> Timer: <label>{{counter}}</label> Count: <label [innerText]="mouseCounter"></label>
+        </button>
+        <!-- <button class="btn btn-sm btn-primary" (click)="resetStatus()">
+          Start
+        </button> -->
+        <!-- Timer: <label>{{counter}}</label> Count: <label [innerText]="mouseCounter"></label> -->
     </div>
 </nav>

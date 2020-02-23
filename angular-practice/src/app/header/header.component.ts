@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   mouseCounter: number;
   counter: number;
   timer;
+  keyword = '';
 
   constructor() { }
 
@@ -17,11 +18,12 @@ export class HeaderComponent implements OnInit {
   }
 
   search($event) {
-    // console.log($event);
-    if(!this.mouseCounter) {
-      this.resetStatus();
-    }
-    this.mouseCounter += 1;
+    console.log(this.keyword);
+
+    // if (!this.mouseCounter) {
+    //   this.resetStatus();
+    // }
+    // this.mouseCounter += 1;
   }
 
   resetStatus() {
