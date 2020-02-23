@@ -12,6 +12,9 @@ export class HeaderComponent implements OnInit {
   timer;
   keyword = '';
 
+  isHighlight = false;
+  fontSize = 24;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -19,7 +22,8 @@ export class HeaderComponent implements OnInit {
 
   search($event) {
     console.log(this.keyword);
-
+    this.isHighlight = !this.isHighlight;
+    this.fontSize = this.fontSize + 2;
     // if (!this.mouseCounter) {
     //   this.resetStatus();
     // }
