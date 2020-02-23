@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'angular-practice';
   subtitle = 'A place to share your <u>knowledge</u>.';
 
-  list = [
+  oriList = [
     {
       'title': '12sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
       'slug': 'zp7yqc',
@@ -63,5 +63,13 @@ export class AppComponent {
       'favoritesCount': 5
     }
   ];
+  list = this.oriList;
 
+  filterArticles(keyword: string) {
+    // do something
+    // console.log('app:' + keyword);
+    this.list = this.oriList.filter((item) => {
+      return item.title.indexOf(keyword) !== -1;
+    });
+  }
 }
