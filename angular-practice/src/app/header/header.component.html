@@ -2,8 +2,11 @@
     <div class="container">
         <a class="navbar-brand" href="index.html">conduit</a>
         <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword">
+        <button class="btn btn-sm btn-primary" (click)="resetStatus()">
+          Start
+        </button>
         <button class="btn btn-sm btn-primary" (click)="search($event)">
-    <i class="ion-search"></i>
-  </button>
+          <i class="ion-search"></i>
+        </button> Timer: <label>{{counter}}</label> Count: <label [innerText]="mouseCounter"></label>
     </div>
 </nav>

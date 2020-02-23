@@ -7,13 +7,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  mouseCounter: number;
+  counter: number;
+  timer;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   search($event) {
-    console.log($event);
+    // console.log($event);
+    if(!this.mouseCounter) {
+      this.resetStatus();
+    }
+    this.mouseCounter += 1;
   }
 
+  resetStatus() {
+    this.mouseCounter = 0;
+    this.counter = 30;
+
+    this.timeElapse();
+  }
+
+  timeElapse() {
+    this.timer = setTimeout(() => {
+      if (this.counter >= 1) {
+        this.counter -= 1;
+        this.timeElapse();
+      } else {
+        clearTimeout(this.timer);
+      }
+    }, 1000);
+  }
 }
