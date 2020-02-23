@@ -8,4 +8,5 @@ import { from } from 'rxjs';
 })
 export class AppComponent {
   title = 'angular-practice';
+  subtitle = 'A place to share your <u>knowledge</u>.';
 }
