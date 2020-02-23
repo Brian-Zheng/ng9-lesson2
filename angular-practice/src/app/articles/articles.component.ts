@@ -60,7 +60,7 @@ export class ArticlesComponent implements OnInit {
       'favorited': false,
       'favoritesCount': 5
     }
-  ]
+  ];
 
   ngOnInit(): void {
   }
